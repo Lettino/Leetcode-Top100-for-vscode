@@ -53,6 +53,24 @@
  */
 class Solution {
     public int removeDuplicates(int[] nums) {
-        
-    }
+        int len = nums.length;
+        if (len <= 0) {
+             return 0;
+        }
+ 
+        int i = 1;
+        int insert_pos = 1;
+ 
+        while (i < len) {
+             if (nums[i] != nums[insert_pos - 1]) {
+                 nums[insert_pos++] = nums[i++];
+             }
+ 
+             else {
+                 ++i;
+             }
+        }
+ 
+        return insert_pos;
+     }
 }
