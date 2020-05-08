@@ -57,9 +57,9 @@ class Solution {
         if (len <= 0) {
              return 0;
         }
- 
+        
         int i = 1;
-        int insert_pos = 1;
+        int insert_pos = 1;// 插入位置
  
         while (i < len) {
              if (nums[i] != nums[insert_pos - 1]) {
